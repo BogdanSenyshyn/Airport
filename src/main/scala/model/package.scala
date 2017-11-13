@@ -1,5 +1,10 @@
+import java.time._
+
 import slick.jdbc.PostgresProfile.api._
-import com.github.nscala_time.time.Imports._
+
 package object model {
-  implicit val dataTimeLongMapper = MappedColumnType.base[DateTime, String](_.toString, _)
+  implicit val dataTimeStringMapper = MappedColumnType.base[LocalDateTime, String](
+    (l: LocalDateTime) => l.toString,
+    (s: String) => LocalDateTime.parse(s)
+  )
 }
