@@ -4,7 +4,7 @@
 		module="testairport_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20171113183215"
+		publication="20171113185011"
 	>
 		<description>
 		TestAirport
@@ -36,5 +36,6 @@
 		<dependency org="org.slf4j" name="slf4j-nop" rev="1.6.4" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.slick" name="slick_2.12" rev="3.2.1" conf="compile->default(compile)"/>
 		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile->default(compile)"/>
+		<dependency org="com.github.nscala-time" name="nscala-time_2.12" rev="2.18.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
