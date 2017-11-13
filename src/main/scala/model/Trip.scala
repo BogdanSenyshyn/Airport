@@ -24,6 +24,20 @@ object TripTable {
   val table = TableQuery[TripTable]
 }
 
+case class TripToCompany (idComp: Option[Long], name: String)
+class TripToCompanyTable(tag: Tag) extends Table[(TripToCompany)](tag, "trip_to_company") {
+  val idComp = column[Long]("id_comp", O.PrimaryKey)
+  val name = column[String]("name")
+
+  val idCompFk = foreignKey("id_comp_fk", idComp, TableQuery[CompanyTable])(_.idComp)
+  def * = (idComp.?, name) <> (TripToCompany.apply _ tupled,TripToCompany.unapply)
+  // ers - 1 parameter for previous tuple
+}
+
+object TripToCompanyTable {
+  val table = TableQuery[TripToCompanyTable]
+}
+
 class TripRepository(db: Database) {
   def create(trip: Trip): Future[Trip] = db.run(TripTable.table returning TripTable.table += trip)
 }
