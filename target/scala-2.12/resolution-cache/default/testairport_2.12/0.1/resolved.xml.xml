@@ -4,7 +4,7 @@
 		module="testairport_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20171113180502"
+		publication="20171113183215"
 	>
 		<description>
 		TestAirport
@@ -32,5 +32,9 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.postgresql" name="postgresql" rev="9.3-1100-jdbc41" conf="compile->default(compile)"/>
+		<dependency org="org.slf4j" name="slf4j-nop" rev="1.6.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick_2.12" rev="3.2.1" conf="compile->default(compile)"/>
+		<dependency org="ch.qos.logback" name="logback-classic" rev="1.1.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
