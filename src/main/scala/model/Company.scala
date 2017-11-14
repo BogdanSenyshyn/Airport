@@ -4,13 +4,12 @@ import java.time._
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Future
 
-case class Company (idComp: Option[Long], name: String)
+case class Company (idComp: Option[Int], name: String)
 
 class CompanyTable(tag: Tag) extends Table[Company](tag, "company") {
-  val idComp = column[Long]("id_comp", O.PrimaryKey)
+  val idComp = column[Int]("id_comp", O.PrimaryKey)
   val name = column[String]("name")
 
-  //val directorFk = foreignKey("director_id_fk", directorId, TableQuery[StaffTable])(_.id)
   def * = (idComp.?, name) <> (Company.apply _ tupled, Company.unapply)
 }
 
