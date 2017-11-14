@@ -2,7 +2,6 @@ import model._
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Await
 import java.time._
-import java.time.format.DateTimeFormatter
 
 
 object Main {

@@ -38,5 +38,9 @@ object TripToCompanyTable {
 }
 
 class TripRepository(db: Database) {
+  val tripTableQuery = TableQuery[TripTable]
   def create(trip: Trip): Future[Trip] = db.run(TripTable.table returning TripTable.table += trip)
+  def update(trip: Trip): Future[Int] = db.run(tripTableQuery.filter(_.tripNo === trip.tripNo).update(trip))
+  def delete(tripNo: Int): Future[Int] = db.run(tripTableQuery.filter(_.tripNo === tripNo).delete)
+  def getById(tripNo: Int): Future[Option[Trip]] = db.run(tripTableQuery.filter(_.tripNo === tripNo).result.headOption)
 }

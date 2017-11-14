@@ -54,6 +54,11 @@ object PassInTripToPassengerTable {
 
 
 class PassInTripRepository(db: Database) {
+  val passintripTableQuery = TableQuery[PassInTripTable]
   def create(passInTrip: PassInTrip): Future[PassInTrip] = db.run(PassInTripTable.table returning PassInTripTable.table
     += passInTrip)
+  def update(passInTrip: PassInTrip): Future[Int] = db.run(passintripTableQuery.filter(_.idPsg
+    === passInTrip.idPsg).update(passInTrip))
+  def delete(idPsg: Int): Future[Int] = db.run(passintripTableQuery.filter(_.idPsg === idPsg).delete)
+  def getById(idPsg: Int): Future[Option[PassInTrip]] = db.run(passintripTableQuery.filter(_.idPsg === idPsg).result.headOption)
 }

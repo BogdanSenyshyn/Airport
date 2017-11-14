@@ -17,6 +17,9 @@ object PassengerTable {
 }
 
 class PassengerRepository(db: Database) {
-  def create(passenger: Passenger): Future[Passenger] = db.run(PassengerTable.table returning PassengerTable.table
-    += passenger)
+  val passengerTableQuery = TableQuery[PassengerTable]
+  def create(passenger: Passenger): Future[Passenger] = db.run(PassengerTable.table returning PassengerTable.table += passenger)
+  def update(passenger: Passenger): Future[Int] = db.run(passengerTableQuery.filter(_.idPsg === passenger.idPsg).update(passenger))
+  def delete(idPsg: Int): Future[Int] = db.run(passengerTableQuery.filter(_.idPsg === idPsg).delete)
+  def getById(idPsg: Int): Future[Option[Passenger]] = db.run(passengerTableQuery.filter(_.idPsg === idPsg).result.headOption)
 }
