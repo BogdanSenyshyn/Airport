@@ -2,71 +2,27 @@
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/bsenyshyn-y/TestAirport/src/main/scala/model/Pass_in_trip.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(/home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTrip.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/Main$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTrip.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTripTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassengerTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassenger$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripRepository.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/Main.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassenger.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTrip$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassengerTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTripTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTrip$.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/bsenyshyn-y/TestAirport/src/main/scala/model/Trip.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/Main.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Company.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/package.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Pass_in_trip.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Passenger.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(/home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Company$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/CompanyTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/CompanyRepository.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTrip.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/Main$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Passenger$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassengerTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Company.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTrip.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTripTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripToCompany.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassengerTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassenger$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Trip$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripRepository.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/Main.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripToCompanyTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassenger.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTrip$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToPassengerTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripToCompany$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripToTripTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTripTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/CompanyTable$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripToCompanyTable.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassInTrip$.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Trip.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/TripRepository.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/Passenger.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassengerRepository.class, /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes/model/PassengerTable.class)[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(model.PassInTripToTripTable, model.PassInTripToTrip, model.PassInTripToPassenger, model.PassInTripTable, model.PassInTripToPassengerTable, model.PassInTrip, model.PassInTripRepository)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(model.PassInTripToTripTable, model.Passenger, model.TripToCompany, model.CompanyRepository, model.PassInTripToTrip, model.PassengerTable, model.PassengerRepository, model.PassInTripToPassenger, model.PassInTripTable, model.package, model.Company, model.PassInTripToPassengerTable, model.TripToCompanyTable, model.PassInTrip, model.TripRepository, Main, model.Trip, model.PassInTripRepository, model.TripTable, model.CompanyTable)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set(/home/bsenyshyn-y/TestAirport/src/main/scala/Main.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Pass_in_trip.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(/home/bsenyshyn-y/TestAirport/src/main/scala/model/Trip.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/Main.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Company.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Pass_in_trip.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/model/Passenger.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(model.PassInTripToTripTable, model.PassInTripToTrip, model.PassInTripToPassenger, model.PassInTripTable, model.PassInTripToPassengerTable, model.PassInTrip, model.PassInTripRepository)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/bsenyshyn-y/TestAirport/src/main/scala/model/Pass_in_trip.scala, /home/bsenyshyn-y/TestAirport/src/main/scala/Main.scala)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated package objects: Set(model.package)[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 6 sources: invalidated sources (6) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 6 Scala sources to /home/bsenyshyn-y/TestAirport/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.3:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.3:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 208ea4df for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 72a64fdd for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/bsenyshyn-y/TestAirport/target/scala-2.12/classes:/home/bsenyshyn-y/.ivy2/cache/org.postgresql/postgresql/jars/postgresql-9.3-1100-jdbc41.jar:/home/bsenyshyn-y/.ivy2/cache/org.slf4j/slf4j-nop/jars/slf4j-nop-1.6.4.jar:/home/bsenyshyn-y/.ivy2/cache/com.typesafe.slick/slick_2.12/bundles/slick_2.12-3.2.1.jar:/home/bsenyshyn-y/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.18.jar:/home/bsenyshyn-y/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar:/home/bsenyshyn-y/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar:/home/bsenyshyn-y/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.2.jar:/home/bsenyshyn-y/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.2.jar:/home/bsenyshyn-y/.ivy2/cache/com.github.nscala-time/nscala-time_2.12/jars/nscala-time_2.12-2.18.0.jar:/home/bsenyshyn-y/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.9.jar:/home/bsenyshyn-y/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.371874479 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 9.500411182 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from model.PassInTripToTrip...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(model.PassInTripToTrip)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(model.PassInTripToTrip)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(model.PassInTripToTrip,ModifiedNames(changes = UsedName(copy,[Default]), UsedName(date,[Default]), UsedName(copy$default$3,[Default]), UsedName(place,[Default]), UsedName(model;PassInTripToTrip;init;,[Default]))) invalidates 1 classes due to The model.PassInTripToTrip has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(copy,[Default]), UsedName(date,[Default]), UsedName(copy$default$3,[Default]), UsedName(place,[Default]), UsedName(model;PassInTripToTrip;init;,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(model.PassInTripToTrip)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from model.PassInTripToTripTable...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(model.PassInTripToTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(model.PassInTripToTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of Main. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(model.PassInTripToTripTable,ModifiedNames(changes = UsedName(date,[Default]), UsedName(tripNoFk,[Default]), UsedName(place,[Default]))) invalidates 1 classes due to The model.PassInTripToTripTable has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(date,[Default]), UsedName(tripNoFk,[Default]), UsedName(place,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(model.PassInTripToTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from model.PassInTripToPassengerTable...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(model.PassInTripToPassengerTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(model.PassInTripToPassengerTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of Main. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(model.PassInTripToPassengerTable,ModifiedNames(changes = UsedName(idPsgFk,[Default]))) invalidates 1 classes due to The model.PassInTripToPassengerTable has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(idPsgFk,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(model.PassInTripToPassengerTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from model.PassInTripTable...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(model.PassInTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(model.PassInTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of Main. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(model.PassInTripTable,ModifiedNames(changes = UsedName(idPsgFk,[Default]), UsedName(dateFk,[Default]))) invalidates 1 classes due to The model.PassInTripTable has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(idPsgFk,[Default]), UsedName(dateFk,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(model.PassInTripTable)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

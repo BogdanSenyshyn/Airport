@@ -3,6 +3,7 @@ package model
 import java.time._
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Future
+import slick.lifted.ForeignKeyQuery
 
 case class PassInTrip (tripNo: Option[Int], date: LocalDateTime, idPsg: Int, place: String)
 
@@ -13,10 +14,10 @@ class PassInTripTable(tag: Tag) extends Table[PassInTrip](tag, "pass_in_trip") {
   val place = column[String]("place")
 
   val pk = primaryKey("pass_in_trip_pk", (tripNo, date, idPsg))
+
+  val * = (tripNo.?, date, idPsg, place) <> (PassInTrip.apply _ tupled, PassInTrip.unapply)
   val tripNoFk = foreignKey("trip_no_fk", tripNo, TableQuery[TripTable])(_.tripNo)
   val idPsgFk = foreignKey("id_psg_fk", idPsg, TableQuery[PassengerTable])(_.idPsg)
-
-  def * = (tripNo.?, date, idPsg, place) <> (PassInTrip.apply _ tupled, PassInTrip.unapply)
 }
 
 object PassInTripTable {

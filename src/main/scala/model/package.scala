@@ -6,7 +6,7 @@ import slick.jdbc.PostgresProfile.api._
 package object model {
   implicit val dataTimeStringMapper = MappedColumnType.base[LocalDateTime, String](
     (l: LocalDateTime) => l.toString,
-    (s: String) => LocalDateTime.parse(converter(s), pattern)
+    (s: String) => LocalDateTime.parse(s)
   )
 
   val listCompanies = List(
