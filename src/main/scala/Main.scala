@@ -2,11 +2,8 @@ import model._
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.Await
 import java.time.format.DateTimeFormatter
-import slick.lifted.ForeignKeyQuery
 import scala.concurrent.ExecutionContext.Implicits.global
-import java.time._
-
-import java.util.Calendar
+import java.time.LocalDateTime
 
 
 object Main {
@@ -34,24 +31,24 @@ object Main {
 
 
   def databaseFill(): Unit = {
-//    for(company <- listCompanies){
-//      Await.result(companyRepository.create(Company(Some(company._1), company._2)), scala.concurrent.duration.Duration.Inf)
-//    }
-//
-//    for(passenger <- listPassengers){
-//      Await.result(passengerRepository.create(Passenger(Some(passenger._1), passenger._2)), scala.concurrent.duration.Duration.Inf)
-//    }
+    for(company <- listCompanies){
+      Await.result(companyRepository.create(Company(Some(company._1), company._2)), scala.concurrent.duration.Duration.Inf)
+    }
 
-//    for(trip <- listTrips){
-//      Await.result(tripRepository.create(Trip(Some(trip._1), trip._2, trip._3, trip._4, trip._5,
-//        LocalDateTime.parse(converter(trip._6), pattern), LocalDateTime.parse(converter(trip._7), pattern))),
-//        scala.concurrent.duration.Duration.Inf)
-//    }
+    for(passenger <- listPassengers){
+      Await.result(passengerRepository.create(Passenger(Some(passenger._1), passenger._2)), scala.concurrent.duration.Duration.Inf)
+    }
 
-//    for(pass <- listPassInTrip){
-//      Await.result(passInTripRepository.create(PassInTrip(Some(pass._1), LocalDateTime.parse(converter(pass._2), pattern)
-//        , pass._3, pass._4)), scala.concurrent.duration.Duration.Inf)
-//    }
+    for(trip <- listTrips){
+      Await.result(tripRepository.create(Trip(Some(trip._1), trip._2, trip._3, trip._4, trip._5,
+        LocalDateTime.parse(converter(trip._6), pattern), LocalDateTime.parse(converter(trip._7), pattern))),
+        scala.concurrent.duration.Duration.Inf)
+    }
+
+    for(pass <- listPassInTrip){
+      Await.result(passInTripRepository.create(PassInTrip(Some(pass._1), LocalDateTime.parse(converter(pass._2), pattern)
+        , pass._3, pass._4)), scala.concurrent.duration.Duration.Inf)
+    }
 
     //67
     val sixtySevenQuery = TripTable.table.groupBy( t => (t.townFrom, t.townTo)).
@@ -163,12 +160,59 @@ object Main {
     }
 
     //94
-    val ninetyFourQuery{
+    val ninetyFourQuery = {
       PassInTripTable.table.join(TripTable.table).on(_.tripNo === _.tripNo)
         .filter(_._2.townFrom === "Rostov")
         .filter(_._1.date < LocalDateTime.parse("2003-04-07T00:00"))
         .groupBy(t => (t._1.date,t._2.townFrom))
         .map{case((date,town),count) => (count.countDistinct,date)}
+        .result.statements.mkString
+    }
+
+    //107
+    val oneHundredSeventhTask = {
+      PassInTripTable.table.join(TripTable.table).on(_.tripNo === _.tripNo)
+        .join(CompanyTable.table).on(_._2.idComp === _.idComp)
+        .filter(_._1._2.townFrom === "Rostov")
+        .filter(_._1._1.date < LocalDateTime.parse("2003-04-30T00:00"))
+        .map{t => (t._1._1.idPsg,t._2.name,t._1._2.tripNo,t._1._1.date)}.sortBy(t => t._4)
+        .filter(t => t._1 === 6).sortBy(_._4.desc).take(1)
+        .map{case (psgId,company,trip,date) => (company,trip,date)}
+        .result.statements.mkString
+    }
+
+    //95 (1, 4)
+    val tripJoinCompany = for {
+      (trip, comp) <- TripTable.table join CompanyTable.table on(_.idComp === _.idComp)
+    } yield (trip.tripNo, comp.idComp, comp.name)
+
+    val tripsAndPassInTrip = for {
+      (tripJComp, passInTrips) <- tripJoinCompany join PassInTripTable.table on(_._1 === _.tripNo)
+    } yield (tripJComp._3, passInTrips.tripNo)
+
+    val tripsAndPassengers = for {
+      (passInTrip, tripJComp) <- PassInTripTable.table join tripJoinCompany on(_.tripNo === _._1)
+    } yield (tripJComp._1, tripJComp._3)
+    //
+    val q95_1 = tripsAndPassInTrip.
+      groupBy(_._1).
+      map{ case(name, tripNo) => name -> tripNo.length }
+
+    val q95_5 = tripsAndPassengers.
+      groupBy(_._2).
+      map{ case(name, tripNo) => name -> tripNo.length}
+    println(q95_1.result.statements.mkString)
+
+    //Queries almost working
+    //110 (Parsing of strings not working)(better to comment it for not interuppting)
+
+    val oneHundredTenTask = {
+      PassengerTable.table.join(PassInTripTable.table).on(_.idPsg === _.idPsg)
+        .join(TripTable.table).on(_._2.tripNo === _.tripNo)
+        .filter(t => t._2.timeIn < t._2.timeOut && LocalDateTime.parse((t._2.timeOut.toString)).getDayOfWeek.name.equals("SATURDAY")
+          && LocalDateTime.parse((t._2.timeIn.toString)).getDayOfWeek.name.equals("SUNDAY"))
+        .groupBy(t => (t._1._1.name,t._2.timeOut))
+        .map{case(name) => (name._1)}
         .result.statements.mkString
     }
   }
