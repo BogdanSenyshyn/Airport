@@ -92,10 +92,12 @@ object Main {
       sortBy(_._2.desc).result.statements.mkString
 
     //77
-    val seventySevenQuery = PassInTripTable.table.join(TripTable.table).on(_.tripNo === _.tripNo).
-      filter(t => t._2.townFrom === "Rostov").
-      groupBy(t => (t._1.tripNo, t._1.date)).
-      map{case ((trip, date), count) => (count.countDistinct, date)}.take(1).result.statements.mkString
+    val seventySevenQuery = PassInTripTable.table.join(TripTable.table).on(_.tripNo === _.tripNo)
+      .filter(t => t._2.townFrom === "Rostov")
+      .groupBy(t => (t._1.tripNo, t._1.date))
+      .map{case ((trip, date), count) => (count.countDistinct, date)}
+      .sortBy(_._2.asc)
+      .result.statements.mkString
 
     //102
     val subquery5 = (for {
@@ -136,6 +138,37 @@ object Main {
         .groupBy(t => (t._1._1._1.name,t._2.name))
         .map{case((name,comp),count) => (name,comp,count.length)}
         .sortBy(_._3.desc).take(2)
+        .result.statements.mkString
+    }
+
+    //114
+    val oneHundredFourteenQuery = {
+      PassengerTable.table.join(PassInTripTable.table).on(_.idPsg === _.idPsg)
+        .join(TripTable.table).on(_._2.tripNo === _.tripNo)
+        .groupBy(t => (t._1._1.name,t._1._2.place))
+        .map{case((name,place),count) => (name, count.length)}
+        .sortBy(_._2.desc).take(3)
+        .result.statements.mkString
+    }
+
+    //87
+    val eightySevenQuery = {
+      PassengerTable.table.join(PassInTripTable.table).on(_.idPsg === _.idPsg)
+        .join(TripTable.table).on(_._2.tripNo === _.tripNo)
+        .filter(t => t._2.townTo === "Moscow")
+        .groupBy(t => (t._1._1.name, t._2.townTo,t._2.townFrom))
+        .map{case((name,to,from),count) => (name, count.length)}
+        .filter{ case(name, count) => count > 1}
+        .result.statements.mkString
+    }
+
+    //94
+    val ninetyFourQuery{
+      PassInTripTable.table.join(TripTable.table).on(_.tripNo === _.tripNo)
+        .filter(_._2.townFrom === "Rostov")
+        .filter(_._1.date < LocalDateTime.parse("2003-04-07T00:00"))
+        .groupBy(t => (t._1.date,t._2.townFrom))
+        .map{case((date,town),count) => (count.countDistinct,date)}
         .result.statements.mkString
     }
   }
