@@ -1995,41 +1995,87 @@
 [debug] == resolving dependencies default#testairport$sources;0.1->org.scala-lang#scala-compiler;2.12.4 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] org.postgresql#postgresql;9.3-1100-jdbc41!postgresql.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-nop;1.6.4!slf4j-nop.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.2!logback-core.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.2!logback-classic.jar(src)
-[debug] 		tried /home/bsenyshyn-y/.ivy2/local/com.github.nscala-time/nscala-time_2.12/2.18.0/srcs/nscala-time_2.12-sources.jar
-[debug] 		tried /home/bsenyshyn-y/.ivy2/local/org.joda/joda-convert/1.2/srcs/joda-convert-sources.jar
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar
-[debug] 		tried /home/bsenyshyn-y/.ivy2/local/joda-time/joda-time/2.9.9/srcs/joda-time-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.12/2.18.0/nscala-time_2.12-2.18.0-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar(src)
+[debug] no default ivy user dir defined: set to /home/bsenyshyn-y/.ivy2
+[debug] 	[NOT REQUIRED] org.postgresql#postgresql;9.3-1100-jdbc41!postgresql.jar(src)
+[debug] no default ivy user dir defined: set to /home/bsenyshyn-y/.ivy2
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /home/bsenyshyn-y/.ivy2/cache
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.2!logback-classic.jar(src)
+[debug] no default ivy user dir defined: set to /home/bsenyshyn-y/.ivy2
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /home/bsenyshyn-y/.ivy2/cache
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /home/bsenyshyn-y/.ivy2/cache
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] no default ivy user dir defined: set to /home/bsenyshyn-y/.ivy2
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] settings loaded (56ms)
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (53ms)
+[debug] 	default cache: /home/bsenyshyn-y/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-nop;1.6.4!slf4j-nop.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.2!logback-core.jar(src)
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /home/bsenyshyn-y/.ivy2/cache
+[debug] 	default cache: /home/bsenyshyn-y/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.18!slf4j-api.jar(src)
-[info] downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar
-[info] downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar
-[info] downloading https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.12/2.18.0/nscala-time_2.12-2.18.0-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.12/2.18.0/nscala-time_2.12-2.18.0-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.12/2.18.0/nscala-time_2.12-2.18.0-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.12/2.18.0/nscala-time_2.12-2.18.0-sources.jar
-[info] 	[SUCCESSFUL ] com.github.nscala-time#nscala-time_2.12;2.18.0!nscala-time_2.12.jar(src) (1043ms)
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar
-[info] 	[SUCCESSFUL ] org.joda#joda-convert;1.2!joda-convert.jar(src) (1066ms)
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] 	[NOT REQUIRED] com.github.nscala-time#nscala-time_2.12;2.18.0!nscala-time_2.12.jar(src)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.9!joda-time.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(src)
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	[NOT REQUIRED] com.typesafe.slick#slick_2.12;3.2.1!slick_2.12.jar(src)
-[debug] 	public: downloading https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar
-[info] 	[SUCCESSFUL ] joda-time#joda-time;2.9.9!joda-time.jar(src) (3818ms)
-[debug] :: resolution report :: resolve 479ms :: artifacts dl 3836ms
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.2!joda-convert.jar(src)
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (78ms)
+[debug] 	default cache: /home/bsenyshyn-y/.ivy2/cache
+[debug] including url: jar:file:/home/bsenyshyn-y/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.3/ivy-2.3.0-sbt-1b57d3bbc08ecf671169fd548918da18c91f77be.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] settings loaded (103ms)
+[debug] 	default cache: /home/bsenyshyn-y/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] :: resolution report :: resolve 2291ms :: artifacts dl 184ms
 [debug] 	report for default#testairport$sources;0.1 compile produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-compile.xml
 [debug] 	report for default#testairport$sources;0.1 runtime produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-runtime.xml
 [debug] 	report for default#testairport$sources;0.1 test produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-test.xml
@@ -2041,4 +2087,4 @@
 [debug] 	report for default#testairport$sources;0.1 plugin produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-plugin.xml
 [debug] 	report for default#testairport$sources;0.1 pom produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-pom.xml
 [debug] 	report for default#testairport$sources;0.1 scala-tool produced in /home/bsenyshyn-y/TestAirport/target/scala-2.12/resolution-cache/reports/default-testairport$sources-scala-tool.xml
-[debug] 	resolve done (479ms resolve - 3836ms download)
+[debug] 	resolve done (2291ms resolve - 184ms download)

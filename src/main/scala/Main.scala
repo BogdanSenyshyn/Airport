@@ -54,7 +54,7 @@ object Main {
     val sixtySevenQuery = TripTable.table.groupBy( t => (t.townFrom, t.townTo)).
       map{case ((from, to), counter) => (counter.length)}.sortBy(_.desc).take(1).result.statements.mkString
 
-    //68 almost
+    //68
     val subquery1 = TripTable.table.filter(t => t.townFrom >= t.townTo)
       .groupBy(t => (t.townFrom, t.townTo))
       .map{ case ((townFrom, townTo), group) => (group.length, townFrom, townTo)}
