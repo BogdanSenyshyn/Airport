@@ -2,5 +2,5 @@
 ### Scala template
 *.class
 *.log
-.idea/
-target/
+.idea/*
+target/*
